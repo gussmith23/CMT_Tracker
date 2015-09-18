@@ -99,9 +99,9 @@ namespace CMT_Tracker
             if(display)
             {
                 InitializeComponent();
-                File.Create(@"C:\Users\Josh\Desktop\Josh\Research\CMT_Timings\totals.txt");
-                File.Create(@"C:\Users\Josh\Desktop\Josh\Research\CMT_Timings\process.txt");
-                File.Create(@"C:\Users\Josh\Desktop\Josh\Research\CMT_Timings\keypoints.txt");
+                File.Create(@"CMT_Timings\totals.txt");
+                File.Create(@"CMT_Timings\process.txt");
+                File.Create(@"CMT_Timings\keypoints.txt");
             }
 
             FileInfo assembly = new FileInfo(System.Reflection.Assembly.GetExecutingAssembly().Location);
