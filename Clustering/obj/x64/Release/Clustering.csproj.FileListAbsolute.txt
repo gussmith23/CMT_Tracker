@@ -1,5 +1,0 @@
-R:\hfs5022\CMT_Tracker\Clustering\bin\x64\Release\Clustering.dll
-R:\hfs5022\CMT_Tracker\Clustering\bin\x64\Release\Clustering.pdb
-R:\hfs5022\CMT_Tracker\Clustering\obj\x64\Release\Clustering.csprojResolveAssemblyReference.cache
-R:\hfs5022\CMT_Tracker\Clustering\obj\x64\Release\Clustering.dll
-R:\hfs5022\CMT_Tracker\Clustering\obj\x64\Release\Clustering.pdb
