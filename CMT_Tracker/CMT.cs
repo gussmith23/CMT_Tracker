@@ -17,7 +17,7 @@ namespace CMT_Tracker
     /// <see cref="http://www.gnebehay.com/cmt/"/>
     /// <see cref="Nebehay, Georg and Pflugfelder, Roman. Consensus-based Matching and Tracking of Keypoints for Object Tracking. Winter Conference on Applications of Computer Vision 2014."/>
     /// </summary>
-    class CMT
+    public class CMT
     {
 
         #region Private Members 
