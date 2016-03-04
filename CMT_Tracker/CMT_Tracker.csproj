@@ -126,7 +126,39 @@
       <Name>Clustering</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="neededDLLs\cvextern.dll" />
+    <Content Include="neededDLLs\Emgu.CV.dll" />
+    <Content Include="neededDLLs\Emgu.CV.UI.dll" />
+    <Content Include="neededDLLs\Emgu.CV.UI.xml" />
+    <Content Include="neededDLLs\Emgu.CV.xml" />
+    <Content Include="neededDLLs\Emgu.Util.dll" />
+    <Content Include="neededDLLs\Emgu.Util.xml" />
+    <Content Include="neededDLLs\OpenCL.dll" />
+    <Content Include="neededDLLs\opencv_calib3d2410.dll" />
+    <Content Include="neededDLLs\opencv_contrib2410.dll" />
+    <Content Include="neededDLLs\opencv_core2410.dll" />
+    <Content Include="neededDLLs\opencv_features2d2410.dll" />
+    <Content Include="neededDLLs\opencv_flann2410.dll" />
+    <Content Include="neededDLLs\opencv_gpu2410.dll" />
+    <Content Include="neededDLLs\opencv_highgui2410.dll" />
+    <Content Include="neededDLLs\opencv_imgproc2410.dll" />
+    <Content Include="neededDLLs\opencv_legacy2410.dll" />
+    <Content Include="neededDLLs\opencv_ml2410.dll" />
+    <Content Include="neededDLLs\opencv_nonfree2410.dll" />
+    <Content Include="neededDLLs\opencv_objdetect2410.dll" />
+    <Content Include="neededDLLs\opencv_photo2410.dll" />
+    <Content Include="neededDLLs\opencv_stitching2410.dll" />
+    <Content Include="neededDLLs\opencv_superres2410.dll" />
+    <Content Include="neededDLLs\opencv_video2410.dll" />
+    <Content Include="neededDLLs\opencv_videostab2410.dll" />
+    <Content Include="neededDLLs\ZedGraph.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy/b/y "$(ProjectDir)\neededDLLs\*.dll" "$(TargetDir)"
+</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
