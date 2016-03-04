@@ -127,37 +127,62 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="neededDLLs\cvextern.dll" />
-    <Content Include="neededDLLs\Emgu.CV.dll" />
-    <Content Include="neededDLLs\Emgu.CV.UI.dll" />
-    <Content Include="neededDLLs\Emgu.CV.UI.xml" />
-    <Content Include="neededDLLs\Emgu.CV.xml" />
-    <Content Include="neededDLLs\Emgu.Util.dll" />
-    <Content Include="neededDLLs\Emgu.Util.xml" />
-    <Content Include="neededDLLs\OpenCL.dll" />
-    <Content Include="neededDLLs\opencv_calib3d2410.dll" />
-    <Content Include="neededDLLs\opencv_contrib2410.dll" />
-    <Content Include="neededDLLs\opencv_core2410.dll" />
-    <Content Include="neededDLLs\opencv_features2d2410.dll" />
-    <Content Include="neededDLLs\opencv_flann2410.dll" />
-    <Content Include="neededDLLs\opencv_gpu2410.dll" />
-    <Content Include="neededDLLs\opencv_highgui2410.dll" />
-    <Content Include="neededDLLs\opencv_imgproc2410.dll" />
-    <Content Include="neededDLLs\opencv_legacy2410.dll" />
-    <Content Include="neededDLLs\opencv_ml2410.dll" />
-    <Content Include="neededDLLs\opencv_nonfree2410.dll" />
-    <Content Include="neededDLLs\opencv_objdetect2410.dll" />
-    <Content Include="neededDLLs\opencv_photo2410.dll" />
-    <Content Include="neededDLLs\opencv_stitching2410.dll" />
-    <Content Include="neededDLLs\opencv_superres2410.dll" />
-    <Content Include="neededDLLs\opencv_video2410.dll" />
-    <Content Include="neededDLLs\opencv_videostab2410.dll" />
-    <Content Include="neededDLLs\ZedGraph.dll" />
+    <Content Include="x64DLLs\cvextern.dll" />
+    <Content Include="x64DLLs\Emgu.CV.dll" />
+    <Content Include="x64DLLs\Emgu.CV.UI.dll" />
+    <Content Include="x64DLLs\Emgu.CV.UI.xml" />
+    <Content Include="x64DLLs\Emgu.CV.xml" />
+    <Content Include="x64DLLs\Emgu.Util.dll" />
+    <Content Include="x64DLLs\Emgu.Util.xml" />
+    <Content Include="x64DLLs\OpenCL.dll" />
+    <Content Include="x64DLLs\opencv_calib3d2410.dll" />
+    <Content Include="x64DLLs\opencv_contrib2410.dll" />
+    <Content Include="x64DLLs\opencv_core2410.dll" />
+    <Content Include="x64DLLs\opencv_features2d2410.dll" />
+    <Content Include="x64DLLs\opencv_flann2410.dll" />
+    <Content Include="x64DLLs\opencv_gpu2410.dll" />
+    <Content Include="x64DLLs\opencv_highgui2410.dll" />
+    <Content Include="x64DLLs\opencv_imgproc2410.dll" />
+    <Content Include="x64DLLs\opencv_legacy2410.dll" />
+    <Content Include="x64DLLs\opencv_ml2410.dll" />
+    <Content Include="x64DLLs\opencv_nonfree2410.dll" />
+    <Content Include="x64DLLs\opencv_objdetect2410.dll" />
+    <Content Include="x64DLLs\opencv_photo2410.dll" />
+    <Content Include="x64DLLs\opencv_stitching2410.dll" />
+    <Content Include="x64DLLs\opencv_superres2410.dll" />
+    <Content Include="x64DLLs\opencv_video2410.dll" />
+    <Content Include="x64DLLs\opencv_videostab2410.dll" />
+    <Content Include="x64DLLs\ZedGraph.dll" />
+    <Content Include="x86DLLs\cvextern.dll" />
+    <Content Include="x86DLLs\Emgu.CV.dll" />
+    <Content Include="x86DLLs\Emgu.CV.UI.dll" />
+    <Content Include="x86DLLs\Emgu.Util.dll" />
+    <Content Include="x86DLLs\OpenCL.dll" />
+    <Content Include="x86DLLs\opencv_calib3d2410.dll" />
+    <Content Include="x86DLLs\opencv_contrib2410.dll" />
+    <Content Include="x86DLLs\opencv_core2410.dll" />
+    <Content Include="x86DLLs\opencv_features2d2410.dll" />
+    <Content Include="x86DLLs\opencv_flann2410.dll" />
+    <Content Include="x86DLLs\opencv_gpu2410.dll" />
+    <Content Include="x86DLLs\opencv_highgui2410.dll" />
+    <Content Include="x86DLLs\opencv_imgproc2410.dll" />
+    <Content Include="x86DLLs\opencv_legacy2410.dll" />
+    <Content Include="x86DLLs\opencv_ml2410.dll" />
+    <Content Include="x86DLLs\opencv_nonfree2410.dll" />
+    <Content Include="x86DLLs\opencv_objdetect2410.dll" />
+    <Content Include="x86DLLs\opencv_photo2410.dll" />
+    <Content Include="x86DLLs\opencv_stitching2410.dll" />
+    <Content Include="x86DLLs\opencv_superres2410.dll" />
+    <Content Include="x86DLLs\opencv_video2410.dll" />
+    <Content Include="x86DLLs\opencv_videostab2410.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy/b/y "$(ProjectDir)\neededDLLs\*.dll" "$(TargetDir)"
-</PostBuildEvent>
+    <PostBuildEvent>if $(PlatformName) == x64 (
+copy/b/y "$(ProjectDir)\x64DLLs\*.dll" "$(TargetDir)"
+) ELSE (
+copy/b/y "$(ProjectDir)\x86DLLs\*.dll" "$(TargetDir)"
+)</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
